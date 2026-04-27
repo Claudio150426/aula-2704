@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora do Andrade</title>
+</head>
+<body>
+    <h1>Calculadora do Andrade</h1>
+    <hr>
+    <form action="">
+    Nota 1:<br/>
+    <input type="number 1" id="n1"><br/>
+    Nota 2:<br/>
+    <input type="number 2" id="n2"><br/><br/>
+
+    <button type="button" onclick="Calcular()">Calcular</button>
+    <input type="reset" onclick= "Limpar"> <br/>
+
+    Média: <br/>
+    <input type="text" id="resposta" readonly="readonly">
+</form>
+</body>
+    <script>
+        function Calcular() {
+            //ENTRADA DE DADOS -> RECEBENDO DADOS DO HTML
+            let x = parseInt(document.getElementById("n1").value);
+            let y = parseInt(document.getElementById("n2").value);
+
+           //PROCESSAMENTO
+            let soma = (x + y)/2;
+
+            //SAÍDA NA TELA
+            //alert("A soma é: " + soma);
+            //confirm("A soma é: " + soma);
+            document.getElementById("resposta"). value = soma
+        }
+    </script>
+</body>
+</html>
