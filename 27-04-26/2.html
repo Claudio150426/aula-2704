@@ -9,15 +9,15 @@
     <h1>Calculadora do Andrade</h1>
     <hr>
     <form action="">
-    Nota 1:<br/>
-    <input type="number 1" id="n1"><br/>
-    Nota 2:<br/>
-    <input type="number 2" id="n2"><br/><br/>
+    Número 1:<br/>
+    <input type="number" id="n1"><br/>
+    Número 2:<br/>
+    <input type="number" id="n2"><br/><br/>
 
     <button type="button" onclick="Calcular()">Calcular</button>
     <input type="reset" onclick= "Limpar"> <br/>
 
-    Média: <br/>
+    Resultado: <br/>
     <input type="text" id="resposta" readonly="readonly">
 </form>
 </body>
@@ -28,7 +28,7 @@
             let y = parseInt(document.getElementById("n2").value);
 
            //PROCESSAMENTO
-            let soma = (x + y)/2;
+            let soma = x + y;
 
             //SAÍDA NA TELA
             //alert("A soma é: " + soma);
