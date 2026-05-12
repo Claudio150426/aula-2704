@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7 da Lista</title>
+</head>
+
+<body>
+    <h1>Exercício 7 da Lista</h1>
+    <hr>
+    <form>
+        DIGITE O SEU TURNO <br>
+        (M) Matutino (V) Vespertino (N) Noturno:<br/><br>
+        <input type="text" id="TURNO" maxlength="1"><br />
+        <br>
+        <input type="button" onclick="SAUDAÇÃO()" value="= "Verifique"/> <br>
+        <input type="text" id="resposta" readonly><br /><br />
+        Situação:<br />
+        <input type="text" id="resultado" readonly>
+    </form>
+    <script>
+        function calcular() {
+            let x = parseFloat(document.getElementById("n1").value);
+            let y = parseFloat(document.getElementById("n2").value);
+            if (isNaN(x) || isNaN(y)) {
+                alert("Digite valores válidos.");
+                return;
+            }
+            let media = (x + y) / 2;
+            document.getElementById("resposta").value = media.toFixed(2);
+            if (media >= 7) {
+                document.getElementById("resultado").value = "Aprovado";
+            } else {
+                document.getElementById("resultado").value = "Reprovado";
+            }
+        }  
+    </script>
+</body>
+
+</html>

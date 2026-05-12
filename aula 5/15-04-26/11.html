@@ -1,0 +1,34 @@
+<<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora do Andrade</title>
+</head>
+<body>
+    <h1>Calculadora do Andrade</h1>
+    <hr>
+
+    Número 1:<br/>
+    <input type="text" id="n1"><br/>
+    Número 2:<br/>
+    <input type="text" id="n2"><br/><br/>
+
+    <button type="button" onclick="calcular()">Calcular</button>
+
+    <script>
+        function calcular() {
+            //ENTRADA DE DADOS -> RECEBENDO DADOS DO HTML
+            let x = parseInt(document.getElementById("n1").value);
+            let y = parseInt(document.getElementById("n2").value);
+
+           //PROCESSAMENTO
+            let soma = x + y;
+
+            //SAÍDA NA TELA
+            //alert("A soma é: " + soma);
+            confirm("A soma é: " + soma);
+        }
+    </script>
+</body>
+</html>
